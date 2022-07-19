@@ -1,0 +1,13 @@
+.hero {
+    height: 50vh;
+    background-image: url(/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        background-color: rgba($color: #000000, $alpha: .5);
+    }
+}
+
+.card-img-top {
+    height: 300px;
+}
