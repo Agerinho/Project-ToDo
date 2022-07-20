@@ -5,7 +5,7 @@ const printTasks = () => {
     let tasksList = Array.from(JSON.parse(localStorage.getItem("tasks")))
 
     taskslistContainer.innerHTML = ""
-    tasksList.forEach(task => {
+    tasksList.reverse().forEach(task => {
         taskslistContainer.innerHTML += `
         <div class="col mb-4">
             <div class="card h-100 shadow animate__animated animate__fadeIn">
