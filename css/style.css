@@ -1,3 +1,7 @@
+main {
+  min-height: calc(100vh - 120px);
+}
+
 .hero {
   height: 50vh;
   background-image: url(/img/hero.jpg);
@@ -11,5 +15,43 @@
 
 .card-img-top {
   height: 300px;
+}
+
+.task {
+  position: relative;
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
+.task.done {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.task.done .editTaskBtn,
+.task.done .favTaskBtn {
+  pointer-events: none;
+}
+
+.task.done::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.finishedTaskParent {
+  display: none;
+}
+
+.herotext {
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+          backdrop-filter: saturate(180%) blur(5px);
 }
 /*# sourceMappingURL=style.css.map */

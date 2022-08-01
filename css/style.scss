@@ -1,3 +1,7 @@
+main {
+    min-height: calc(100vh - 120px);
+}
+
 .hero {
     height: 50vh;
     background-image: url(/img/hero.jpg);
@@ -10,4 +14,38 @@
 
 .card-img-top {
     height: 300px;
+}
+
+.task {
+    position: relative;
+    transition: transform .4s ease-in-out;
+}
+
+.task.done {
+    transform: scale(.95);
+    transition: all .5s;
+}
+
+.task.done {
+    .editTaskBtn,
+    .favTaskBtn {
+        pointer-events: none;
+    }
+}
+
+.task.done::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color:rgba(#000000, .15);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.finishedTaskParent {
+    display: none;
+}
+
+.herotext {
+    backdrop-filter: saturate(180%) blur(5px);
 }
